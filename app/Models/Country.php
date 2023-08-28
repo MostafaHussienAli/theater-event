@@ -2,17 +2,17 @@
 
 namespace App\Models;
 
+use App\Http\Filters\CountryFilter;
 use App\Http\Filters\Filterable;
-use Spatie\MediaLibrary\HasMedia;
+use App\Models\Translations\CountryTranslation;
 use App\Support\Traits\Selectable;
-use Illuminate\Database\Eloquent\Model;
+use Astrotomic\Translatable\Contracts\Translatable as TranslatableContract;
 use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Builder;
-use Spatie\MediaLibrary\InteractsWithMedia;
-use App\Http\Filters\Countries\CountryFilter;
-use App\Models\Translations\CountryTranslation;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Astrotomic\Translatable\Contracts\Translatable as TranslatableContract;
+use Illuminate\Database\Eloquent\Model;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
 class Country extends Model implements HasMedia, TranslatableContract
 {

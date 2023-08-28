@@ -20353,7 +20353,7 @@
      *
      * @template TKey of array-key
      * @template TModel of \Spatie\MediaLibrary\MediaCollections\Models\Media
-     * @extends \Illuminate\Database\Eloquent\Collection<TKey, TModel>
+     * @extends Collection<TKey, TModel>
      */ 
         class MediaCollection {
          

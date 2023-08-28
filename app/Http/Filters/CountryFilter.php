@@ -1,8 +1,6 @@
 <?php
 
-namespace App\Http\Filters\Countries;
-
-use App\Http\Filters\BaseFilters;
+namespace App\Http\Filters;
 
 class CountryFilter extends BaseFilters
 {

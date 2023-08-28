@@ -2,13 +2,12 @@
 
 namespace App\Models;
 
+use App\Http\Filters\AreaFilter;
 use App\Http\Filters\Filterable;
-use Illuminate\Database\Eloquent\Model;
-use Astrotomic\Translatable\Translatable;
-use App\Http\Filters\Countries\AreaFilter;
 use App\Models\Translations\AreaTranslation;
+use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Model;
 
 class Area extends Model
 {

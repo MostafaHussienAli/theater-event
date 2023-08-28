@@ -1,10 +1,8 @@
 <?php
 
-namespace App\Http\Filters\Countries;
+namespace App\Http\Filters;
 
-use App\Http\Filters\BaseFilters;
-
-class CityFilter extends BaseFilters
+class AreaFilter extends BaseFilters
 {
     /**
      * Registered filters to operate upon.
@@ -13,7 +11,7 @@ class CityFilter extends BaseFilters
      */
     protected $filters = [
         'name',
-        'country_id',
+        'city_id',
     ];
 
     /**
@@ -31,16 +29,17 @@ class CityFilter extends BaseFilters
         return $this->builder;
     }
 
+
     /**
      * Filter the query by a given name.
      *
      * @param string|int $value
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    protected function countryId($value)
+    protected function cityId($value)
     {
         if ($value) {
-            return $this->builder->where('country_id', $value);
+            return $this->builder->where('city_id', $value);
         }
 
         return $this->builder;

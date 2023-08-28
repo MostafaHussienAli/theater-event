@@ -1,11 +1,8 @@
 <?php
 
-namespace App\Http\Filters\Countries;
+namespace App\Http\Filters;
 
-use Illuminate\Support\Arr;
-use App\Http\Filters\BaseFilters;
-
-class SelectFilter extends BaseFilters
+class CityFilter extends BaseFilters
 {
     /**
      * Registered filters to operate upon.
@@ -14,7 +11,7 @@ class SelectFilter extends BaseFilters
      */
     protected $filters = [
         'name',
-        'selected_id',
+        'country_id',
     ];
 
     /**
@@ -33,15 +30,15 @@ class SelectFilter extends BaseFilters
     }
 
     /**
-     * Sorting results by the given id.
+     * Filter the query by a given name.
      *
-     * @param $value
+     * @param string|int $value
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function selectedId($value)
+    protected function countryId($value)
     {
         if ($value) {
-            $this->builder->sortingByIds($value);
+            return $this->builder->where('country_id', $value);
         }
 
         return $this->builder;

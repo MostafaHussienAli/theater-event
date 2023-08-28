@@ -2,15 +2,14 @@
 
 namespace App\Models;
 
+use App\Http\Filters\CityFilter;
 use App\Http\Filters\Filterable;
-use App\Support\Traits\Selectable;
-use Illuminate\Database\Eloquent\Model;
-use Astrotomic\Translatable\Translatable;
-use App\Http\Filters\Countries\CityFilter;
 use App\Models\Translations\CityTranslation;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Support\Traits\Selectable;
 use Astrotomic\Translatable\Contracts\Translatable as TranslatableContract;
-use Illuminate\Database\Eloquent\SoftDeletes;
+use Astrotomic\Translatable\Translatable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
 class City extends Model implements TranslatableContract
 {
