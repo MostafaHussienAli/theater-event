@@ -6,16 +6,16 @@ use Illuminate\Support\Arr;
 use Illuminate\Database\Eloquent\Builder;
 
 /**
- * @method static \Illuminate\Database\Eloquent\Builder sortingByIds($ids)
+ * @method static Builder sortingByIds($ids)
  */
 trait Selectable
 {
     /**
      * Sorting the query result by the given ids.
      *
-     * @param \Illuminate\Database\Eloquent\Builder $builder
+     * @param Builder $builder
      * @param mixed $ids
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @return Builder
      */
     public function scopeSortingByIds(Builder $builder, $ids)
     {

@@ -178,6 +178,7 @@ return [
         App\Providers\SettingsServiceProvider::class,
         App\Providers\LayoutsServiceProvider::class,
 
+        App\Providers\RepositoryServiceProvider::class
     ],
 
     /*

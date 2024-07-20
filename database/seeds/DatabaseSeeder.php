@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             DummyDataSeeder::class,
+            ShowtimeSeeder::class,
         ]);
 
         $this->command->table(['ID', 'Name', 'Email', 'Phone', 'Password', 'Type', 'Type Code'], [
