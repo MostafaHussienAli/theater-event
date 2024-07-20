@@ -2,19 +2,20 @@
 
 namespace App\Http\Filters;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\App;
 
 /**
- * @method static \Illuminate\Database\Eloquent\Builder|$this filter(BaseFilters $filters = null)
+ * @method static Builder|$this filter(BaseFilters $filters = null)
  */
 trait Filterable
 {
     /**
      * Apply all relevant thread filters.
      *
-     * @param \Illuminate\Database\Eloquent\Builder $query
-     * @param \App\Http\Filters\BaseFilters $filters
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @param Builder $query
+     * @param BaseFilters $filters
+     * @return Builder
      */
     public function scopeFilter($query, BaseFilters $filters = null)
     {

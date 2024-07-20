@@ -5,4 +5,8 @@
     @slot('active', request()->routeIs('dashboard.home'))
 @endcomponent
 
-@include('dashboard.countries.partials.actions.sidebar')
+@include('dashboard.eventDays.sidebar')
+@include('dashboard.showtimes.sidebar')
+@include('dashboard.movies.sidebar')
+@include('dashboard.eventDayShowtimes.sidebar')
+@include('dashboard.attendees.sidebar')

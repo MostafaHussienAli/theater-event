@@ -79,6 +79,6 @@ trait UserHelpers
      */
     public function setActiveStatus()
     {
-        $this->forceFill(['active' => $this->active == 1 ? 0 : 1])->save();
+        $this->forceFill(['is_active' => $this->is_active == 1 ? 0 : 1])->save();
     }
 }
